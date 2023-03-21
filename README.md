@@ -1,6 +1,14 @@
-# PLEASE NOTE: CONTENT MIGRATED
+# PLEASE NOTE: The Google Kubernetes Engine Workshop
 
-**Please note that AKS workshop is now hosted on [Microsoft Learn](https://aka.ms/learn/aksworkshop). You may continue to fork this repository, but future updates will be done on the Microsoft Learn platform. To access the new location, please use the following link: <https://aka.ms/learn/aksworkshop>**
+**Welcome to the Google Cloud Kubernetes Workshop. In this lab, you'll go through tasks that will help you master the basic and more advanced topics required to deploy a multi-container application to Kubernetes on [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/docs/concepts/service?hl=ko). 
+
+You can use this guide as a Kubernetes tutorial and as study material to help you get started to learn Kubernetes.
+
+Some of the things you’ll be going through:
+
+- Kubernetes deployments, services and ingress
+- Deploying MongoDB using Helm version 3
+- Google Monitor for Containers, Horizontal Pod Autoscaler and the Cluster Autoscaler**
 
 ## Technology
 

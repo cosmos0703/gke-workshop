@@ -143,8 +143,6 @@ gcloud container clusters create example-cluster \
 * A good sanity check is listing all the nodes in your cluster `kubectl get nodes`.
 * [This is a good cheat sheet](https://linuxacademy.com/site-content/uploads/2019/04/Kubernetes-Cheat-Sheet_07182019.pdf) for kubectl.
 
-{% collapsible %}
-
 > **Note** `kubectl`, the Kubernetes CLI, is already installed on the Google Cloud Shell.
 
 1. Install Kubectl
@@ -167,8 +165,6 @@ List the available nodes
 ```sh
 kubectl get nodes
 ```
-
-{% endcollapsible %}
 
 > **Resources**
 > * <https://cloud.google.com/kubernetes-engine/docs/concepts/service?hl=ko>

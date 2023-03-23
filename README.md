@@ -714,7 +714,7 @@ In order to begin issuing certificates, you will need to set up a `ClusterIssuer
 * Check the status with `kubectl describe clusterissuer.cert-manager.io/letsencrypt` (or other name if you didn't call your issuer `letsencrypt`)
 
 
-Save the YAML below as `letsencrypt-clusterissuer.yaml` or download it from [letsencrypt-clusterissuer.yaml](yaml-solutions/advanced/letsencrypt-clusterissuer.yaml).
+Save the YAML below as `letsencrypt-clusterissuer.yaml` or download it from [letsencrypt-clusterissuer.yaml](https://raw.githubusercontent.com/cosmos0703/gke-workshop/main/yaml-solutions/advanced/letsencrypt-clusterissuer.yaml).
 
 > **Note** Make sure to replace `_YOUR_EMAIL_` with your email.
 
@@ -755,7 +755,7 @@ Issuing certificates can be done automatically by properly annotating the ingres
 * Reapply your changed frontend ingress using `kubectl`
 
 
-Save the YAML below as `frontend-ingress-tls.yaml` or download it from [frontend-ingress-tls.yaml](yaml-solutions/advanced/frontend-ingress-tls.yaml).
+Save the YAML below as `frontend-ingress-tls.yaml` or download it from [frontend-ingress-tls.yaml](https://raw.githubusercontent.com/cosmos0703/gke-workshop/main/yaml-solutions/advanced/frontend-ingress-tls.yaml).
 
 > **Note** Make sure to replace `_INGRESS_CONTROLLER_EXTERNAL_IP_` with your cluster ingress controller external IP. Also make note of the `secretName: frontend-tls-secret` as this is where the issued certificate will be stored as a Kubernetes secret.
 
@@ -873,7 +873,7 @@ Note: even if the certificate is valid, you may still get a warning in your brow
 
 #### Create a new Kubernetes Ingress resource to direct traffic to the `captureorder` service
 
-Save the YAML below as `captureorder-ingress-tls.yaml` or download it from [captureorder-ingress-tls.yaml](yaml-solutions/advanced/captureorder-ingress-tls.yaml).
+Save the YAML below as `captureorder-ingress-tls.yaml` or download it from [captureorder-ingress-tls.yaml](https://raw.githubusercontent.com/cosmos0703/gke-workshop/main/yaml-solutions/advanced/captureorder-ingress-tls.yaml).
 
 > **Note** Make sure to replace `_INGRESS_CONTROLLER_EXTERNAL_IP_` with your cluster's ingress controller external IP.
 
@@ -907,7 +907,7 @@ You should now be able to query the `/v1/orders` endpoint or open the `/swagger`
 
 We need to redeploy the Frontend application so that it accesses the Capture Order API via the newly created Ingress
 
-Save the YAML below as `frontend-deployment.yaml` or download it from [frontend-deployment.yaml](yaml-solutions/advanced/frontend-deployment.yaml).
+Save the YAML below as `frontend-deployment.yaml` or download it from [frontend-deployment.yaml](https://raw.githubusercontent.com/cosmos0703/gke-workshop/main/yaml-solutions/advanced/frontend-deployment.yaml).
 
 > **Note** Make sure to replace `_INGRESS_CONTROLLER_EXTERNAL_IP_` with your cluster's ingress controller external IP.
 

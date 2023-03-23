@@ -1,45 +1,38 @@
-# PLEASE NOTE: The Google Kubernetes Engine Workshop
+# The Google Kubernetes Engine Workshop
 
-**Welcome to the Google Cloud Kubernetes Workshop. In this lab, you'll go through tasks that will help you master the basic and more advanced topics required to deploy a multi-container application to Kubernetes on [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/docs/concepts/service?hl=ko). 
+**Welcome to the Google Cloud Kubernetes Workshop. In this lab, you'll go through tasks that will help you master the basic and more advanced topics required to deploy a multi-container application to Kubernetes on [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/docs/concepts/service?hl=ko).**
 
-You can use this guide as a Kubernetes tutorial and as study material to help you get started to learn Kubernetes.
+**You can use this guide as a Kubernetes tutorial and as study material to help you get started to learn Kubernetes.**
 
-Some of the things you’ll be going through:
+**Some of the things you’ll be going through:**
 
-- Kubernetes deployments, services and ingress
-- Deploying MongoDB using Helm version 3
-- Google Monitor for Containers, Horizontal Pod Autoscaler and the Cluster Autoscaler**
+**- Kubernetes deployments, services and ingress**
+**- Deploying MongoDB using Helm version 3**
+**- Google Monitor for Containers, Horizontal Pod Autoscaler and the Cluster Autoscaler**
 
-## Technology
+## 1. k8sbasics
 
-- The website is statically built using Jekyll and you'll find the different pages inside the `_entries` folder
-- You can preview your edits locally if you run `make build-run` inside the repository root
-- The build pipeline builds Docker images of the site and hosts it on a private repository on Azure Container Registry (`msworkshops.azurecr.io`)
-- The `master` branch gets deployed to the production slot [aksworkshop.io](https://aksworkshop.io)
-- The `staging` branch gets deployed to the staging slot [staging.aksworkshop.io](https://staging.aksworkshop.io)
-- The `devsecops` branch gets deployed to the devsecops slot [devsecops.aksworkshop.io](https://devsecops.aksworkshop.io)
-- The `kubesec` branch gets deployed to the kubesec slot [kubesec.aksworkshop.io](https://kubesec.aksworkshop.io)
+There is an assumption of some prior knowledge of Kubernetes and its concepts. If you are new to Kubernetes, start with the [Kubernetes Learning Path](https://kubernetes.io/docs/tutorials/kubernetes-basics/) to learn Kubernetes basics, then go through the concepts of [what Kubernetes is and what it isn't](https://kubernetes.io/docs/concepts/overview/).
 
-## Contributing
+- Kubernetes deployments
+- Kubernetes services
+- Kubernetes ingress
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+### 1.1. prerequisites
 
- Since the workshop is running live, please fork and branch off `staging`, then submit a Pull Request against `staging`.
- After your PR is approved and staging is tested it will be merged to master on the next weekend. 
-**If it's urgent**, then follow with a PR against master. 
-In both cases it's desirable that every PR has an issue linking to it. 
- 
- If you want your name to show up in the [contributors](https://aksworkshop.io/#contributors), please add your GitHub username to [`_entries/99 Contributors.md`](_entries/99%20Contributors.md) in alphabetical order.
+Set up the GKS Cluster
+시작하기 전에 다음 태스크를 수행했는지 확인합니다. [GKE Cluster 생성](https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster?hl=ko)
+아래 내용은 대략적인 내용만 담고 있으니 Cluster 생성을 위해서는 공식 문서를 확인 바랍니다.
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+- gcloud project id 설정
+- network 설정
+- Google Kubernetes Engine API 사용 설정
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+```sh
+gcloud config set project PROJECT_ID
+gcloud container clusters create-auto hello-cluster \
+    --region=COMPUTE_REGION
+```
 
 ## Legal Notices
 

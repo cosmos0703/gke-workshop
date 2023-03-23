@@ -30,23 +30,27 @@ Set up the GKS Cluster
 
 ```sh
 gcloud config set project PROJECT_ID
-gcloud container clusters create-auto hello-cluster \
-    --region=COMPUTE_REGION
+gcloud container clusters create example-cluster \
+    --zone us-central1-a \
+    --node-locations us-central1-a,us-central1-b,us-central1-c
 ```
 
-## Legal Notices
+kubectl 설치 및  클러스터 액스 구성은 다음 문서를 확인합니다. [Kubectl 설치 및 클러스터 액세스 구성](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=ko)
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+### 1.2 Application Overview
+You will be deploying a customer-facing order placement and fulfillment application that is containerized and is architected for a microservice implementation.
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+![Application diagram](media/overview.png)
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+The application consists of 3 components:
 
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+* A public facing Order Capture swagger enabled API
+* A public facing frontend
+* A MongoDB database
+
+## 2. Legal Notices
+
+### 2.1 Legal Notices
+
+
+

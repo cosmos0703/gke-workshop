@@ -75,8 +75,6 @@ Google has a managed Kubernetes service, GKE (Google Kubernetes Engine), we'll u
 
 #### Before you begin
 
-{% collapsible %}
-
 You can check in the link [create a zonnal gke cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster)
 
 Before you start, make sure you have performed the following tasks:
